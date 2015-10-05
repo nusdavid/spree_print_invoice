@@ -1,5 +1,3 @@
-require 'prawn/layout'
-
 font "Helvetica"
 
 im = Rails.application.assets.find_asset(Spree::PrintInvoice::Config[:print_invoice_logo_path])
