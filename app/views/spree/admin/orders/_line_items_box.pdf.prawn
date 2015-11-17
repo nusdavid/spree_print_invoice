@@ -36,7 +36,7 @@ unless @hide_prices
   data << [nil, nil, Spree.t(:total), @order.display_total.to_s]
 end
 
-move_down 250
+move_down 255
 table(data, :width => 525) do
   cells.border_width = 0.5
 
