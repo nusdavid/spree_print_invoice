@@ -30,18 +30,19 @@ unless @hide_prices
 
   @order.shipments.each do |shipment|
     extra_row_count += 1
-    data << [nil, nil, shipment.shipping_method.name, shipment.display_cost.to_s]
+    data << [nil, nil, Spree.t(:shipment), shipment.display_cost.to_s]
   end
 
   data << [nil, nil, Spree.t(:total), @order.display_total.to_s]
 end
 
-move_down(200)
+move_down 250
 table(data, :width => 525) do
   cells.border_width = 0.5
 
   row(0).borders = [:bottom]
   row(0).font_style = :bold
+  row(0).background_color = 'D3D3D3'
 
   last_column = data[0].length - 1
   row(0).columns(0..last_column).borders = [:top, :right, :bottom, :left]
@@ -58,3 +59,5 @@ table(data, :width => 525) do
     row(-1).column(4).font_style = :bold
   end
 end
+
+move_down data.size
