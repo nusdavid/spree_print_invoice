@@ -46,6 +46,6 @@ table(data, :width => 525) do
 
 end
 
-move_down 30
+move_down 15
 text "Order ##{@order.number}"
 move_down 20
