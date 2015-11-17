@@ -17,7 +17,7 @@ en:
 
     invoice_number: Invoice Number
     invoice_date: Invoice issued on
-    billing_address: Bill to:
-    shipping_address: Ship to:
+    billing_address: "Bill to:"
+    shipping_address: "Ship to:"
     qty: Quantity
     shipment: Shipping
