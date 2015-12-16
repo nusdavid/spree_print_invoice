@@ -11,7 +11,7 @@ else
 end
 
 @order.line_items.each do |item|
-  row = [ item.variant.product.search, item.variant.quantity.presentation]
+  row = [ item.variant.product.search, item.variant.quantity.try(:presentation) || item.quantity]
   row << item.single_display_amount.to_s unless @hide_prices
   data << row
 end
